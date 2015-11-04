@@ -3,8 +3,28 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Document</title>
+		<header> <%= @crm_app_name%> </header>
 	</head>
 	<body>
 		<%= yield %>
+		<footer>
+		<a href="/"><h4> Return to the home page</h4> </a>
+		<h4>More about CRMD</h4>
+
+			<nav>
+				<ul>
+					<li>About Us</li>
+					<li>Version Information</li>
+					<li>Help</li>
+				</ul>
+			</nav>
+		</footer>
 	</body>
 </html>
+
+
+
+
+<!-- with emmett installed, type ul to initiate unordered list, then type li*4 then tab to make 4 item list -->
+<!-- Better option, nav>ul>li*3 then tab -->
+<!-- shorthand: write classwhatever then hit tab, and the class is created with Whatever name -->
