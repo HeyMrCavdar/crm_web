@@ -1,6 +1,10 @@
 require_relative 'contact'
 require 'sinatra'
 
+# Temporary fake data so that we always find contact with id 1000.
+matt = Contact.create("Johnny", "Bravo", "johnny@bitmakerlabs.com", "Rockstar")
+
+
 get '/' do
 	@crm_app_name = "Customer Relationship Management for Dummies"
 	erb :index
@@ -22,4 +26,12 @@ end
 post '/contacts' do
   Contact.create(params[:first_name], params[:last_name], params[:email], params[:note])
   redirect to('/contacts')
+end
+
+get "/contacts/1000" do
+  @contact = Contact.find(1000)
+  if @contact
+  	erb :show_contact
+	else
+	end
 end
