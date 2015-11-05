@@ -1,0 +1,17 @@
+body {
+	background-color: #00B81B;
+	color: #FF1100;
+}
+
+ul {
+	list-style: none;
+}
+
+.people {
+	font-weight: 900;
+	box-shadow: 5px 15px 10px #00AF01;
+	padding: 10px 30px;
+}
+
+
+/*Color picker, press command shift c, and */
